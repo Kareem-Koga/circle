@@ -95,6 +95,7 @@ class MouseMotionDisplay
      */
     public void init(GLAutoDrawable drawable) {
         GL gl = drawable.getGL();
+        //to change the color of background
         red = 1.0f;
         green = 1.0f;
         blue = 1.0f;
@@ -113,6 +114,7 @@ class MouseMotionDisplay
         gl.glClear(GL.GL_COLOR_BUFFER_BIT);
 
         gl.glBegin(GL.GL_POINTS);
+        //to change the color of the bigger circle
         gl.glColor3f(0.0f,0.0f,0.0f);
         for (double a = 0; a < Math.toRadians(360); a += Math.toRadians(1)) {
             double x = 50 + 20 * (Math.cos(a));
@@ -129,9 +131,9 @@ class MouseMotionDisplay
                 green = 0.0f;
                 blue = 0.0f;
                 break;
-    // Circles intersect
+    // Circles intersect with colore red
             case 2:
-                 // Circles are completely separate
+                 // Circles are completely separate with the colore black
                 red = 0.0f;
                 green = 0.0f;
                 blue = 0.0f;
@@ -141,7 +143,7 @@ class MouseMotionDisplay
                 green = 1.0f;
                 blue = 0.0f;
                  break;
-                   // the two centers are on each other
+                   // the two centers are on each other with the color blue
             case 4:
                 red = 0.0f;
                 green = 0.0f;
